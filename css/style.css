@@ -3,14 +3,39 @@
 global > color
 ------------------------------
 */
+:root {
+  --color-primary: #87d303;
+  --color-primary02: #a5df40;
+  --color-bg-extra-light: #fafafa;
+  --color-bg-light: #f2f2f2;
+  --color-border: #dddddd;
+  --color-font-base: #333333;
+  --color-font-light: #888888;
+  --color-white: #ffffff;
+  --color-red: #e95757;
+}
+
 /*!
 global > font
 ------------------------------
 */
+:root {
+  --font-family-base: "Zen Kaku Gothic New", sans-serif;
+  --font-family-en: "Dosis", sans-serif;
+}
+
 /*!
 global > z-index
 ------------------------------
 */
+:root {
+  --z-index-modal: 100;
+  --z-index-header: 30;
+  --z-index-menu: 10;
+  --z-index-default: 1;
+  --z-index-negative: -1;
+}
+
 /*!
 foundation > reset
 ------------------------------
@@ -116,7 +141,8 @@ button {
   font-size: 100%;
   border-radius: 0;
   border: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   -webkit-appearance: none;
   background-color: inherit;
 }
@@ -184,12 +210,14 @@ iframe {
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /*!
@@ -205,8 +233,25 @@ foundation > base
   }
 }
 
+* {
+  letter-spacing: 0.05em;
+}
+
 html {
   font-size: calc(100vw / var(--base-vw));
+}
+
+body {
+  line-height: 1.7;
+  font-size: 16rem;
+  font-family: var(--font-family-base);
+  color: var(--color-font-base);
+  font-weight: 500;
+}
+@media screen and (min-width: 900px) {
+  body {
+    font-size: 18rem;
+  }
 }
 
 /*!
@@ -239,6 +284,102 @@ component > entry-button
 component > title
 ------------------------------
 */
+.c-title {
+  grid-template-columns: 10rem 1fr;
+  gap: 14rem 18rem;
+  display: inline-grid;
+}
+.c-title::before {
+  content: "";
+  display: block;
+  width: 10rem;
+  aspect-ratio: 1/1;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: center;
+}
+@media screen and (min-width: 900px) {
+  .c-title {
+    grid-template-columns: 10rem auto auto;
+    gap: 14rem;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+}
+
+.c-title--white::before {
+  background-color: var(--color-white);
+}
+
+.c-title-en {
+  font-family: var(--font-family-en);
+  font-size: 40rem;
+  color: var(--color-font-base);
+  line-height: 1;
+  font-weight: 400;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+@media screen and (min-width: 900px) {
+  .c-title-en {
+    font-size: 50rem;
+    margin-left: 10rem;
+  }
+}
+
+.c-title-en--white {
+  color: var(--color-white);
+}
+
+.c-title-ja {
+  font-size: 14rem;
+  color: var(--color-font-light);
+  line-height: 1;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+@media screen and (min-width: 900px) {
+  .c-title-ja {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+}
+
+.c-title-ja--white {
+  color: var(--color-white);
+}
+
+.c-title-small {
+  font-family: var(--font-family-en);
+  font-size: 16rem;
+  color: var(--color-font-base);
+  line-height: 1;
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 10rem;
+  letter-spacing: 0.075em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 900px) {
+  .c-title-small {
+    font-size: 20rem;
+    gap: 14rem;
+  }
+}
+.c-title-small::before {
+  content: "";
+  display: block;
+  width: 6rem;
+  aspect-ratio: 1/1;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
 /*!
 component > page-kv
 ------------------------------
@@ -263,6 +404,24 @@ component > form
 layout > container
 ------------------------------
 */
+.l-container-s {
+  padding-inline: 20rem;
+}
+@media screen and (min-width: 900px) {
+  .l-container-s {
+    padding-inline: 303rem;
+  }
+}
+
+.l-container {
+  padding-inline: 20rem;
+}
+@media screen and (min-width: 900px) {
+  .l-container {
+    padding-inline: 83rem;
+  }
+}
+
 /*!
 layout > header
 ------------------------------

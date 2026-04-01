@@ -12,6 +12,10 @@ foundation > base
   }
 }
 
+* {
+  letter-spacing: 0.05em;
+}
+
 html {
   font-size: calc(100vw / var(--base-vw));
 }
