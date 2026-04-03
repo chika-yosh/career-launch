@@ -307,6 +307,8 @@ component > button
   background-color: var(--color-white);
   border-radius: 50%;
   border: calc((var(--size) - var(--dot-size)) / 2) solid var(--color-primary);
+  -webkit-transition: scale 0.3s;
+  transition: scale 0.3s;
 }
 @media screen and (min-width: 900px) {
   .c-button::after {
@@ -322,6 +324,56 @@ component > button
 .c-button--small::after {
   --size: 32rem;
   --dot-size: 4rem;
+}
+
+.c-entry-button {
+  width: 290rem;
+}
+@media screen and (min-width: 900px) {
+  .c-entry-button {
+    width: 355rem;
+  }
+}
+
+.c-entry-button-link {
+  display: block;
+  position: relative;
+}
+@media (any-hover: hover) {
+  .c-entry-button-link:hover .c-button::after {
+    scale: 1.1;
+  }
+}
+.c-entry-button-link img {
+  -webkit-animation: rotate 20s linear infinite;
+          animation: rotate 20s linear infinite;
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.c-entry-button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
 /*!

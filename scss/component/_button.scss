@@ -30,6 +30,7 @@ component > button
     background-color: var(--color-white);
     border-radius: 50%;
     border: calc((var(--size) - var(--dot-size)) / 2) solid var(--color-primary);
+    transition: scale 0.3s;
 
     @include g.mq() {
       --size: 58rem;
@@ -46,4 +47,48 @@ component > button
     --size: 32rem;
     --dot-size: 4rem;
   }
+}
+
+.c-entry-button {
+  width: 290rem;
+
+  @include g.mq() {
+    width: 355rem;
+  }
+}
+
+.c-entry-button-link {
+  display: block;
+  position: relative;
+
+  @media (any-hover: hover) {
+    &:hover {
+      .c-button {
+        &::after {
+          scale: 1.1;
+        }
+      }
+    }
+  }
+
+  img {
+    animation: rotate 20s linear infinite;
+  }
+
+  // 回転アニメーション
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.c-entry-button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
