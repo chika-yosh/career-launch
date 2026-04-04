@@ -541,6 +541,80 @@ component > news-item
 component > pagination
 ------------------------------
 */
+.c-pagination-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.c-pagination-link {
+  background-color: var(--color-bg-light);
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+@media (any-hover: hover) {
+  .c-pagination-link:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+  .c-pagination-link:hover .c-pagination-icon {
+    background-color: var(--color-white);
+  }
+}
+
+.c-pagination-link,
+.c-pagination-number,
+.c-pagination-dots {
+  display: inline-block;
+  width: 40rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 16rem;
+}
+
+.c-pagination--current {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.c-pagination-icon {
+  -webkit-mask-image: url(../img/icon-arrow.svg);
+          mask-image: url(../img/icon-arrow.svg);
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  background-color: var(--color-font-base);
+  display: block;
+  width: 10rem;
+  aspect-ratio: 1/1;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.c-pagination-icon--prev {
+  rotate: 180deg;
+}
+
+.c-pagination-dot-icon {
+  -webkit-mask-image: url(../img/icon-dots-small.svg);
+          mask-image: url(../img/icon-dots-small.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  -webkit-mask-position: center;
+          mask-position: center;
+  background-color: var(--color-font-base);
+  display: block;
+  width: 10rem;
+  height: 3rem;
+}
+
 /*!
 component > breadcrumb
 ------------------------------
