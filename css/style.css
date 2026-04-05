@@ -484,6 +484,102 @@ component > title
 component > page-kv
 ------------------------------
 */
+.c-page-kv {
+  background-color: var(--color-bg-light);
+  height: 365rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+@media screen and (min-width: 900px) {
+  .c-page-kv {
+    height: 467rem;
+  }
+}
+.c-page-kv::after {
+  content: "";
+  width: 100%;
+  height: 64rem;
+  background-color: var(--color-white);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 30rem 0 0 0;
+}
+@media screen and (min-width: 900px) {
+  .c-page-kv::after {
+    height: 96rem;
+    border-radius: 50rem 0 0 0;
+  }
+}
+.c-page-kv > * {
+  width: 100%;
+}
+
+.c-page-kv-inner {
+  padding-bottom: 84rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32rem;
+}
+@media screen and (min-width: 900px) {
+  .c-page-kv-inner {
+    padding-bottom: 116rem;
+    gap: 56rem;
+  }
+}
+
+.c-page-kv-title-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 22rem;
+}
+@media screen and (min-width: 900px) {
+  .c-page-kv-title-wrap {
+    gap: 28rem;
+  }
+}
+
+.c-page-kv-title-en {
+  font-family: var(--font-family-en);
+  font-weight: 300;
+  font-size: 55rem;
+  line-height: 1;
+}
+@media screen and (min-width: 900px) {
+  .c-page-kv-title-en {
+    font-size: 72rem;
+  }
+}
+
+.c-page-kv-title-ja {
+  line-height: 1;
+  color: var(--color-font-light);
+}
+
+.c-page-kv-breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 /*!
 component > news-item
 ------------------------------
@@ -541,14 +637,189 @@ component > news-item
 component > pagination
 ------------------------------
 */
+.c-pagination-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.c-pagination-link {
+  background-color: var(--color-bg-light);
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+@media (any-hover: hover) {
+  .c-pagination-link:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+  .c-pagination-link:hover .c-pagination-icon {
+    background-color: var(--color-white);
+  }
+}
+
+.c-pagination-link,
+.c-pagination-number,
+.c-pagination-dots {
+  display: inline-block;
+  width: 40rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 16rem;
+}
+
+.c-pagination--current {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.c-pagination-icon {
+  -webkit-mask-image: url(../img/icon-arrow.svg);
+          mask-image: url(../img/icon-arrow.svg);
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  background-color: var(--color-font-base);
+  display: block;
+  width: 10rem;
+  aspect-ratio: 1/1;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.c-pagination-icon--prev {
+  rotate: 180deg;
+}
+
+.c-pagination-dot-icon {
+  -webkit-mask-image: url(../img/icon-dots-small.svg);
+          mask-image: url(../img/icon-dots-small.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  -webkit-mask-position: center;
+          mask-position: center;
+  background-color: var(--color-font-base);
+  display: block;
+  width: 10rem;
+  height: 3rem;
+}
+
 /*!
 component > breadcrumb
 ------------------------------
 */
+.c-breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c-breadcrumb-item {
+  font-size: 14rem;
+  color: var(--color-font-light);
+  line-height: 1;
+  font-family: var(--font-family-en);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 900px) {
+  .c-breadcrumb-item {
+    font-size: 16rem;
+  }
+}
+.c-breadcrumb-item:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 11rem;
+  height: 8rem;
+  -webkit-mask-image: url(../img/icon-arrow.svg);
+          mask-image: url(../img/icon-arrow.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  background-color: var(--color-font-light);
+  margin: 0 10rem;
+}
+
+.c-breadcrumb-item--current {
+  color: var(--color-primary);
+}
+
 /*!
 component > form
 ------------------------------
 */
+.c-form-required {
+  display: inline-block;
+  font-size: 13rem;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding: 2rem 8rem;
+  border-radius: 7rem;
+}
+
+.c-form-text {
+  padding: 12rem 8rem;
+  border-radius: 8rem;
+  background-color: var(--color-bg-extra-light);
+  width: 100%;
+}
+.c-form-text::-webkit-input-placeholder {
+  color: var(--color-font-light);
+}
+.c-form-text::-moz-placeholder {
+  color: var(--color-font-light);
+}
+.c-form-text:-ms-input-placeholder {
+  color: var(--color-font-light);
+}
+.c-form-text::-ms-input-placeholder {
+  color: var(--color-font-light);
+}
+.c-form-text::placeholder {
+  color: var(--color-font-light);
+}
+.c-form-text:focus {
+  outline: 1px solid var(--color-primary);
+}
+
+.c-form-text--textarea {
+  min-height: 200rem;
+  field-sizing: content;
+}
+
+.c-form-button {
+  font-size: 18rem;
+  line-height: 1;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: 13rem 39rem;
+  border-radius: 100vh;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+  border: 1rem solid var(--color-primary);
+}
+@media (any-hover: hover) {
+  .c-form-button:hover {
+    color: var(--color-primary);
+    background-color: var(--color-white);
+  }
+}
+
 /*!
 layout > container
 ------------------------------

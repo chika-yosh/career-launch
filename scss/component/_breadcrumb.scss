@@ -4,3 +4,38 @@
 component > breadcrumb
 ------------------------------
 */
+.c-breadcrumb {
+  display: flex;
+}
+
+.c-breadcrumb-item {
+  font-size: 14rem;
+  color: var(--color-font-light);
+  line-height: 1;
+  font-family: var(--font-family-en);
+  display: flex;
+  align-items: center;
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+
+  &:not(:last-child){
+    &::after{
+      content: "";
+      display: inline-block;
+      width: 11rem;
+      height: 8rem;
+      mask-image: url(../img/icon-arrow.svg);
+      mask-size: cover;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      background-color: var(--color-font-light);
+      margin: 0 10rem;
+    }
+  }
+}
+
+.c-breadcrumb-item--current {
+  color: var(--color-primary);
+}
