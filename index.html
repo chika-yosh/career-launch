@@ -22,11 +22,68 @@
 
     <!-- js -->
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/component/hamburger-menu.js"></script>
 
     <!-- noindex -->
     <meta name="robots" content="noindex" />
   </head>
   <body>
+    <!-- header -->
+    <header class="l-header">
+      <p class="l-header-logo">
+        <img src="img/logo.svg" alt="Career Launch 就活スクール" width="251" height="46" decoding="async" />
+      </p>
+
+      <!-- header menu -->
+      <dialog class="l-header-menu js-header-menu" aria-label="メニュー">
+        <button class="l-header-menu-close-button js-header-menu-close-button" ><img src="img/icon-cross.svg" alt="メニューを閉じる" width="24" height="24" decoding="async" /></button>
+        <nav class="l-header-menu-nav">
+          <ul class="l-header-menu-list">
+            <li class="l-header-menu-item">
+              <a href="index.html" class="l-header-menu-link">
+                <span class="l-header-menu-text-en">Top</span>
+                <span class="l-header-menu-text-ja">トップ</span>
+              </a>
+            </li>
+            <li class="l-header-menu-item">
+              <a href="about.html" class="l-header-menu-link">
+                <span class="l-header-menu-text-en">About</span>
+                <span class="l-header-menu-text-ja">私たちについて</span>
+              </a>
+            </li>
+            <li class="l-header-menu-item">
+              <a href="service.html" class="l-header-menu-link">
+                <span class="l-header-menu-text-en">Services</span>
+                <span class="l-header-menu-text-ja">サービス</span>
+              </a>
+            </li>
+            <li class="l-header-menu-item">
+              <a href="news.html" class="l-header-menu-link">
+                <span class="l-header-menu-text-en">News</span>
+                <span class="l-header-menu-text-ja">お知らせ</span>
+              </a>
+            </li>
+            <li class="l-header-menu-item">
+              <a href="recruit.html" class="l-header-menu-link">
+                <span class="l-header-menu-text-en">Recruit</span>
+                <span class="l-header-menu-text-ja">採用情報</span>
+              </a>
+            </li>
+            <li class="l-header-menu-item">
+              <a href="contact.html" class="l-header-menu-link">
+                <span class="l-header-menu-text-en">Contact</span>
+                <span class="l-header-menu-text-ja">お問い合わせ</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </dialog>
+
+      <button class="l-header-menu-open-button js-header-menu-open-button">
+        <img src="img/icon-dots.svg" alt="メニューを開く" width="24" height="4" decoding="async" />
+      </button>
+    </header>
+
     <!-- <div class="l-container">
       <div class="c-title">
         <span class="c-title-en">Philosophy</span>
@@ -39,8 +96,8 @@
     <!-- <div class="l-container">
       <a href="" class="c-button c-button--small">View more</a>
     </div> -->
-    <!-- 
-    <div class="l-container">
+
+    <!-- <div class="l-container">
       <div class="c-entry-button">
         <a href="" class="c-entry-button-link">
           <img src="img/recruit-button-text.svg" alt="" width="356" height="362" decoding="async" />
@@ -51,69 +108,70 @@
       </div>
     </div> -->
 
-    <div class="l-container">
-      <!-- <article class="c-news-item">
-        <a href="" class="c-news-item-link">
-          <time datetime="2025-06-10" class="c-news-item-date">2025.06.10</time>
-          <h2 class="c-news-item-title">8月の夏期集中コース申込受付開始</h2>
-        </a>
-      </article> -->
+    <!-- <article class="c-news-item">
+      <a href="" class="c-news-item-link">
+        <time datetime="2025-06-10" class="c-news-item-date">2025.06.10</time>
+        <h2 class="c-news-item-title">8月の夏期集中コース申込受付開始</h2>
+      </a>
+    </article> -->
 
-      <!-- <div class="c-pagination">
-        <nav class="c-pagination-nav">
-          <ul class="c-pagination-list">
-            <li class="c-pagination-item">
-              <a href="" class="c-pagination-link">
-                <span class="c-pagination-icon c-pagination-icon--prev"></span>
-                <span class="u-visually-hidden">前のページ</span>
-              </a>
-            </li>
-            <li class="c-pagination-item">
-              <a href="" class="c-pagination-link">1</a>
-            </li>
-            <li class="c-pagination-item">
-              <span class="c-pagination-number c-pagination--current">2</span>
-            </li>
-            <li class="c-pagination-item">
-              <a href="" class="c-pagination-link">3</a>
-            </li>
-            <li class="c-pagination-item">
-              <span class="c-pagination-dots">
-                <span class="c-pagination-dot-icon"></span>
-              </span>
-            </li>
-            <li class="c-pagination-item">
-              <a href="" class="c-pagination-link">10</a>
-            </li>
-            <li class="c-pagination-item">
-              <a href="" class="c-pagination-link">
-                <span class="c-pagination-icon c-pagination-icon--next"></span>
-                <span class="u-visually-hidden">次のページ</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div> -->
+    <!-- <div class="c-pagination">
+      <nav class="c-pagination-nav">
+        <ul class="c-pagination-list">
+          <li class="c-pagination-item">
+            <a href="" class="c-pagination-link">
+              <span class="c-pagination-icon c-pagination-icon--prev"></span>
+              <span class="u-visually-hidden">前のページ</span>
+            </a>
+          </li>
+          <li class="c-pagination-item">
+            <a href="" class="c-pagination-link">1</a>
+          </li>
+          <li class="c-pagination-item">
+            <span class="c-pagination-number c-pagination--current">2</span>
+          </li>
+          <li class="c-pagination-item">
+            <a href="" class="c-pagination-link">3</a>
+          </li>
+          <li class="c-pagination-item">
+            <span class="c-pagination-dots">
+              <span class="c-pagination-dot-icon"></span>
+            </span>
+          </li>
+          <li class="c-pagination-item">
+            <a href="" class="c-pagination-link">10</a>
+          </li>
+          <li class="c-pagination-item">
+            <a href="" class="c-pagination-link">
+              <span class="c-pagination-icon c-pagination-icon--next"></span>
+              <span class="u-visually-hidden">次のページ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div> -->
 
-      <!-- form -->
-      <!-- <span class="c-form-required">必須</span>
+    <!-- form -->
+    <!-- <div class="l-container">
+      <span class="c-form-required">必須</span>
       <br />
       <input type="text" name="" id="" placeholder="山田 太郎" class="c-form-text" />
       <br />
       <textarea name="" id="" placeholder="ご自由にご記入ください。" class="c-form-text c-form-text--textarea"></textarea>
 
-      <button type="submit" class="c-form-button">送信する</button> -->
+      <button type="submit" class="c-form-button">送信する</button>
+    </div> -->
 
-      <!-- パンくずリスト -->
-      <!-- <ol class="c-breadcrumb">
-        <li class="c-breadcrumb-item">
-          <a href="">Top</a>
-        </li>
-        <li class="c-breadcrumb-item c-breadcrumb-item--current">About</li>
-      </ol> -->
-    </div>
+    <!-- パンくずリスト -->
+    <!-- <ol class="c-breadcrumb">
+      <li class="c-breadcrumb-item">
+        <a href="">Top</a>
+      </li>
+      <li class="c-breadcrumb-item c-breadcrumb-item--current">About</li>
+    </ol> -->
 
-    <div class="c-page-kv">
+    <!-- kv -->
+    <!-- <div class="c-page-kv">
       <div class="l-container">
         <div class="c-page-kv-inner">
           <div class="c-page-kv-title-wrap">
@@ -131,6 +189,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </body>
 </html>
