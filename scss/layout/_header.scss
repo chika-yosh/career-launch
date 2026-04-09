@@ -21,6 +21,10 @@ layout > header
 
 .l-header-logo {
   width: 240rem;
+
+  @include g.mq() {
+    width: 290rem;
+  }
 }
 
 // dialog
@@ -31,6 +35,14 @@ layout > header
 
   &::backdrop {
     display: none;
+  }
+
+  @include g.mq() {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
   }
 }
 
@@ -45,6 +57,14 @@ layout > header
   padding: 40rem;
   border-radius: 0 0 0 30rem;
   color: var(--color-white);
+
+  @include g.mq() {
+    background-color: transparent;
+    padding: 0;
+    color: var(--color-font-base);
+    border-radius: 0;
+    width: auto;
+  }
 }
 
 // ul
@@ -52,10 +72,75 @@ layout > header
   display: flex;
   flex-direction: column;
   gap: 16rem;
+
+  @include g.mq() {
+    flex-direction: row;
+    gap: 50rem;
+    align-items: center;
+  }
+}
+
+// PCではTOPへのリンクはなし
+.l-header-menu-item--top {
+  @include g.mq() {
+    display: none;
+  }
 }
 
 .l-header-menu-link {
   display: block;
+}
+
+// 現在のページ
+.l-header-menu-link--current {
+  @include g.mq() {
+    color: var(--color-primary);
+  }
+}
+
+.l-header-menu-link--white {
+  color: var(--color-white);
+}
+
+.l-header-menu-link--contact {
+  // contactはボタンリンク
+  @include g.mq() {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 9rem 31rem;
+    display: flex;
+    align-items: center;
+    gap: 9rem;
+    border-radius: 100vh;
+    border: 1rem solid var(--color-primary);
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+
+    &::before {
+      content: "";
+      display: block;
+      mask-image: url(../img/icon-mail.svg);
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      width: 16rem;
+      height: 13rem;
+      background-color: var(--color-white);
+      transition: background-color 0.3s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--color-white);
+        color: var(--color-primary);
+
+        &::before {
+          background-color: var(--color-primary);
+        }
+      }
+    }
+  }
 }
 
 .l-header-menu-text-en {
@@ -63,12 +148,21 @@ layout > header
   font-size: 28rem;
   letter-spacing: 0.025em;
   display: block;
+
+  @include g.mq() {
+    line-height: 1;
+    font-size: 18rem;
+  }
 }
 
 .l-header-menu-text-ja {
   font-size: 14rem;
   opacity: 0.8;
   display: block;
+
+  @include g.mq() {
+    display: none;
+  }
 }
 
 .l-header-menu-open-button,
@@ -80,7 +174,7 @@ layout > header
   place-items: center;
 
   @include g.mq() {
-  display: none;
+    display: none;
   }
 }
 
