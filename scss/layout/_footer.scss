@@ -4,3 +4,179 @@
 layout > footer
 ------------------------------
 */
+.l-footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 54rem 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 24rem;
+
+  @include g.mq() {
+    padding: 54rem 64rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 80rem 0;
+  }
+}
+
+.l-footer-logo {
+  width: 250rem;
+  margin-inline: auto;
+
+  @include g.mq() {
+    order: 1;
+    margin: 0;
+  }
+}
+
+.l-footer-info {
+  text-align: center;
+  font-size: 13rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+
+  * {
+    letter-spacing: 0.075em;
+  }
+
+  @include g.mq() {
+    order: 3;
+    width: calc(100% - 200rem);
+    text-align: left;
+    gap: 5rem;
+  }
+}
+
+.l-footer-company {
+}
+
+.l-footer-address {
+  span {
+    display: block;
+
+    @include g.mq() {
+      display: inline-block;
+    }
+  }
+}
+
+.l-footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 12rem;
+
+  @include g.mq() {
+    justify-content: flex-start;
+  }
+}
+
+.l-footer-menu-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16rem 32rem;
+
+  @include g.mq() {
+    order: 2;
+    gap: 55rem;
+  }
+}
+
+.l-footer-menu-item {
+  line-height: 1;
+  font-family: var(--font-family-en);
+  font-size: 18rem;
+
+  * {
+    letter-spacing: 0.025em;
+  }
+}
+
+.l-footer-menu-item--contact {
+  width: 100%;
+
+  @include g.mq() {
+    // すべて横並びにする
+    width: auto;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9rem;
+    border: 1rem solid var(--color-white);
+    padding: 9rem;
+    text-align: center;
+    border-radius: 100vh;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+
+    @include g.mq() {
+      padding: 9rem 31rem;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 16rem;
+      height: 13rem;
+      mask-image: url(../img/icon-mail.svg);
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: var(--color-white);
+      transition: background-color 0.3s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--color-white);
+        color: var(--color-primary);
+
+        &::before {
+          background-color: var(--color-primary);
+        }
+      }
+    }
+  }
+}
+
+.l-footer-legal {
+  @include g.mq() {
+    order: 4;
+    align-self: center;
+  }
+}
+
+.l-footer-legal-list {
+  display: flex;
+  justify-content: center;
+  gap: 20rem;
+
+  @include g.mq() {
+    justify-content: flex-end;
+  }
+}
+
+.l-footer-legal-item {
+  a {
+    font-family: var(--font-family-en);
+    font-size: 14rem;
+    letter-spacing: 0.025em;
+  }
+}
+
+.l-footer-copyright {
+  display: block;
+  text-align: center;
+  margin-top: 10rem;
+  font-size: 12rem;
+  letter-spacing: 0.075em;
+  opacity: 0.7;
+}
