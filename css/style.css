@@ -272,6 +272,15 @@ utility > utility
   margin: -1px !important;
 }
 
+.u-pb {
+  padding-bottom: 64rem !important;
+}
+@media screen and (min-width: 900px) {
+  .u-pb {
+    padding-bottom: 96rem !important;
+  }
+}
+
 /*!
 component > button
 ------------------------------
@@ -861,6 +870,7 @@ layout > header
   left: 0;
   top: 0;
   width: 100%;
+  z-index: var(--z-index-header);
 }
 @media screen and (min-width: 900px) {
   .l-header {

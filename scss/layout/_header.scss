@@ -13,6 +13,7 @@ layout > header
   left: 0;
   top: 0;
   width: 100%;
+  z-index: var(--z-index-header);
 
   @include g.mq() {
     padding: 24rem 65rem;

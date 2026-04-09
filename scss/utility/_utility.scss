@@ -17,3 +17,11 @@ utility > utility
   clip-path: inset(50%) !important;
   margin: -1px !important;
 }
+
+.u-pb {
+  padding-bottom: 64rem !important;
+
+  @include g.mq() {
+    padding-bottom: 96rem !important;
+  }
+}
