@@ -1304,6 +1304,116 @@ layout > footer
 page > top > top-kv
 ------------------------------
 */
+.top-kv {
+  background-image: url(../img/top/top-kv-sp.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 485rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+@media screen and (min-width: 900px) {
+  .top-kv {
+    background-image: url(../img/top/top-kv.jpg);
+    height: 769rem;
+    position: relative;
+  }
+}
+
+.top-kv-text {
+  padding-bottom: 47rem;
+  color: var(--color-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 21rem;
+}
+@media screen and (min-width: 900px) {
+  .top-kv-text {
+    padding-bottom: 190rem;
+    gap: 54rem;
+  }
+}
+
+.top-kv-text-en {
+  font-family: var(--font-family-en);
+  font-size: 43rem;
+  line-height: 1.05;
+  font-weight: 300;
+  text-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.0588);
+}
+@media screen and (min-width: 900px) {
+  .top-kv-text-en {
+    font-size: 101rem;
+  }
+}
+.top-kv-text-en span {
+  display: block;
+  letter-spacing: 0.025em;
+}
+
+.top-kv-text-ja {
+  letter-spacing: 0.2em;
+  line-height: 1.5;
+}
+@media screen and (min-width: 900px) {
+  .top-kv-text-ja {
+    font-size: 22rem;
+  }
+}
+
+.-top-kv-scroll {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .-top-kv-scroll {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-white);
+    padding: 49rem 22rem 32rem 36rem;
+    gap: 6rem;
+    border-radius: 39rem 0 0 0;
+  }
+  .-top-kv-scroll::after {
+    content: "";
+    display: block;
+    width: 46rem;
+    aspect-ratio: 1/1;
+    background-image: url(../img/top/curve.svg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    left: -46rem;
+  }
+}
+
+.top-kv-scroll-hint {
+  width: 4rem;
+}
+
+.top-kv-scroll-text {
+  font-size: 15rem;
+  line-height: 1;
+  color: var(--color-primary);
+  font-family: var(--font-family-en);
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
 /*!
 page > top > top-about
 ------------------------------
