@@ -25,3 +25,12 @@ utility > utility
     padding-bottom: 96rem !important;
   }
 }
+
+.u-ptb {
+  // padding-block: padding-top & padding-bottom
+  padding-block: 64rem !important;
+
+  @include g.mq() {
+    padding-block: 96rem !important;
+  }
+}

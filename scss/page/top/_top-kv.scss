@@ -58,7 +58,7 @@ page > top > top-kv
   }
 }
 
-.-top-kv-scroll {
+.top-kv-scroll {
   display: none;
 
   @include g.mq() {
