@@ -1645,6 +1645,113 @@ page > top > top-service
 page > top > top-recruit
 ------------------------------
 */
+.top-recruit-img {
+  position: relative;
+}
+
+.top-recruit-img-text {
+  color: var(--color-primary);
+  font-family: var(--font-family-en);
+  font-size: 86rem;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  line-height: 1;
+  position: absolute;
+  left: 20rem;
+  bottom: -33rem;
+}
+@media screen and (min-width: 900px) {
+  .top-recruit-img-text {
+    font-size: 150rem;
+    bottom: -60rem;
+    left: 83rem;
+  }
+}
+
+.top-recruit-content-wrap {
+  margin-top: 80rem;
+}
+@media screen and (min-width: 900px) {
+  .top-recruit-content-wrap {
+    margin-top: 118rem;
+    display: grid;
+    grid-template-columns: 1fr 50%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .top-recruit-content {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+
+.top-recruit-text {
+  font-size: 28rem;
+  line-height: 1.6;
+  margin-top: 16rem;
+}
+@media screen and (min-width: 900px) {
+  .top-recruit-text {
+    font-size: 34rem;
+  }
+}
+.top-recruit-text span {
+  display: block;
+}
+@media screen and (min-width: 900px) {
+  .top-recruit-text span {
+    display: inline;
+  }
+}
+
+.top-recruit-text02 {
+  margin-top: 24rem;
+  line-height: 2.2;
+}
+@media screen and (min-width: 900px) {
+  .top-recruit-text02 {
+    margin-top: 32rem;
+  }
+}
+.top-recruit-text02 span:first-child {
+  display: block;
+}
+@media screen and (min-width: 900px) {
+  .top-recruit-text02 span {
+    display: block;
+  }
+}
+
+.top-recruit-text-en {
+  margin-top: 14rem;
+  font-size: 15rem;
+  font-family: var(--font-family-en);
+  color: var(--color-primary);
+}
+@media screen and (min-width: 900px) {
+  .top-recruit-text-en {
+    margin-top: 24rem;
+  }
+}
+.top-recruit-text-en span {
+  display: block;
+}
+
+.top-recruit-entry-button {
+  margin-top: 64rem;
+  display: grid;
+  place-items: center;
+}
+@media screen and (min-width: 900px) {
+  .top-recruit-entry-button {
+    margin-top: 80rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0 148rem 0 97rem;
+  }
+}
+
 /*!
 page > top > top-news
 ------------------------------
