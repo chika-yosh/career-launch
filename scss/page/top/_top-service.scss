@@ -9,10 +9,13 @@ page > top > top-service
   grid-template-columns: 1fr;
   gap: 40rem;
   position: relative;
+  padding-block: 64rem;
 
   @include g.mq() {
     grid-template-columns: 1fr 714rem;
     gap: 65rem;
+    padding-top: 64rem;
+    padding-bottom: 96rem;
   }
 
   &::before {
@@ -32,9 +35,6 @@ page > top > top-service
       height: 410rem;
     }
   }
-}
-
-.top-service-content {
 }
 
 .top-service-text {
