@@ -4,3 +4,120 @@
 page > about > about-staff
 ------------------------------
 */
+.about-staff {
+  position: relative;
+  padding-top: 40rem;
+
+  @include g.mq() {
+    margin-top: 54rem;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 355rem;
+    height: 430rem;
+    background-color: var(--color-primary);
+    border-radius: 0 0 0 50rem;
+    z-index: var(--z-index-negative);
+
+    @include g.mq() {
+      width: 1326rem;
+      height: 390rem;
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+.about-staff-head {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  @include g.mq() {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.about-staff-text {
+  color: var(--color-white);
+}
+
+.about-staff-slider {
+  margin-top: 40rem;
+
+  overflow: hidden; // TODO:消す
+
+  @include g.mq() {
+    margin-top: 64rem;
+  }
+}
+
+.about-staff-list {
+  margin-left: 20rem; // TODO:消す
+  ul {
+    display: flex;
+    gap: 32rem;
+  }
+}
+
+.about-staff-item {
+  width: 230rem;
+
+  @include g.mq() {
+    width: 285rem;
+  }
+}
+
+.about-staff-item-img {
+  img {
+    border-radius: 10rem;
+  }
+}
+
+.about-staff-item-position {
+  font: 14rem;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  margin-top: 16rem;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 8rem;
+    aspect-ratio: 1/1;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+  }
+}
+
+.about-staff-item-name {
+  display: flex;
+  align-items: center;
+  gap: 16rem;
+}
+
+.about-staff-item-name-ja {
+  font-size: 20rem;
+  letter-spacing: 0.075em;
+
+  @include g.mq() {
+    font-size: 24rem;
+  }
+}
+
+.about-staff-item-name-en {
+  font-size: 14rem;
+  color: var(--color-font-light);
+  font-family: var(--font-family-en);
+
+  @include g.mq() {
+    font-size: 15rem;
+  }
+}
