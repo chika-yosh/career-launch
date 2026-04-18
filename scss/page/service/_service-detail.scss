@@ -4,3 +4,156 @@
 page > service > service-detail
 ------------------------------
 */
+.service-detail-wrap {
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 84rem;
+
+  @include g.mq() {
+    margin-top: 0;
+    gap: 80rem;
+  }
+}
+
+.service-detail {
+  background-color: var(--color-bg-extra-light);
+  border-radius: 10rem;
+  padding: 191rem 24rem 40rem;
+  position: relative;
+
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 14rem;
+    overflow: hidden;
+    padding: 0;
+
+    // 2番目のdetailは画像とテキスト位置が逆
+    &:nth-child(2n) {
+      .service-detail-img {
+        left: 0;
+        top: 0;
+      }
+      .service-detail-content {
+        grid-column: 2/3;
+      }
+    }
+  }
+}
+
+.service-detail-img {
+  position: absolute;
+  top: -20rem;
+  left: 24rem;
+  width: 287rem;
+
+  @include g.mq() {
+    left: auto;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+  }
+
+  img {
+    border-radius: 10rem;
+
+    @include g.mq() {
+      border-radius: 0;
+      // 画像の表示領域を中心にするため
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.service-detail-content {
+  @include g.mq() {
+    padding: 48rem 50rem;
+  }
+}
+
+.service-detail-title-ja {
+  font-size: 20rem;
+
+  @include g.mq() {
+    font-size: 28rem;
+  }
+}
+
+.service-detail-title-en {
+  font-size: 15rem;
+  display: block;
+  font-family: var(--font-family-en);
+  color: var(--color-primary);
+  margin-top: 4rem;
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+}
+
+.service-detail-period {
+  margin-top: 24rem;
+  font-size: 14rem;
+  color: var(--color-font-light);
+
+  @include g.mq() {
+    margin-top: 32rem;
+  }
+}
+
+.service-detail-text {
+  margin-top: 16rem;
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+
+  @include g.mq() {
+    span {
+      display: block;
+    }
+  }
+}
+
+.service-detail-list {
+  margin-top: 24rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+
+  @include g.mq() {
+    margin-top: 32rem;
+  }
+}
+
+.service-detail-item {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 20rem;
+  line-height: 1.5;
+  border-radius: 6rem;
+  display: flex; // アイコン横並びのため
+  align-items: center;
+  gap: 14rem;
+
+  @include g.mq() {
+    font-size: 16rem;
+    padding: 20rem 24rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    flex-shrink: 0; // アイコン潰れないように
+    width: 24rem;
+    aspect-ratio: 1/1;
+    mask-image: url(../img/icon-check.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--color-white);
+  }
+}
