@@ -4,3 +4,7 @@
 page > recruit > recruit-entry
 ------------------------------
 */
+.recruit-entry {
+  display: grid;
+  place-items: center;
+}
