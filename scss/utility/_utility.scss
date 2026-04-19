@@ -34,3 +34,20 @@ utility > utility
     padding-block: 96rem !important;
   }
 }
+
+// テキストホバー時のアニメーション
+.u-text-hover {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s;
+
+  @include g.mq() {
+    @media (any-hover: hover) {
+      &:hover {
+        background-size: 100% 1px;
+      }
+    }
+  }
+}
