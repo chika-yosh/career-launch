@@ -51,18 +51,8 @@ page > about > about-staff
 .about-staff-slider {
   margin-top: 40rem;
 
-  overflow: hidden; // TODO:消す
-
   @include g.mq() {
     margin-top: 64rem;
-  }
-}
-
-.about-staff-list {
-  margin-left: 20rem; // TODO:消す
-  ul {
-    display: flex;
-    gap: 32rem;
   }
 }
 

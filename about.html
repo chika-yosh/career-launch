@@ -18,9 +18,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
 
     <!-- css -->
+    <link rel="stylesheet" href="css/vendor/splide-core.min.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- js -->
+    <script src="js/vendor/splide.min.js" defer></script>
     <script type="module" src="js/main.js"></script>
 
     <!-- noindex -->
@@ -159,10 +161,10 @@
           <p class="about-staff-text">一人ひとりの個性を大切にしながら、あなたの可能性を最大限に引き出します。</p>
         </div>
 
-        <div class="about-staff-slider">
-          <div class="about-staff-list">
-            <ul>
-              <li>
+        <div class="about-staff-slider splide js-about-staff-slider">
+          <div class="about-staff-list splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
                 <div class="about-staff-item">
                   <div class="about-staff-item-img">
                     <img src="img/about/staffs.jpg" alt="高橋 麻里" width="230" height="230" decoding="async" />
@@ -174,7 +176,7 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="splide__slide">
                 <div class="about-staff-item">
                   <div class="about-staff-item-img">
                     <img src="img/about/staffs02.jpg" alt="田中 美咲" width="230" height="230" decoding="async" />
@@ -186,7 +188,7 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="splide__slide">
                 <div class="about-staff-item">
                   <div class="about-staff-item-img">
                     <img src="img/about/staffs03.jpg" alt="佐藤 雄一" width="230" height="230" decoding="async" />
@@ -198,7 +200,7 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="splide__slide">
                 <div class="about-staff-item">
                   <div class="about-staff-item-img">
                     <img src="img/about/staffs04.jpg" alt="山田 恵子" width="230" height="230" decoding="async" />
@@ -210,7 +212,7 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="splide__slide">
                 <div class="about-staff-item">
                   <div class="about-staff-item-img">
                     <img src="img/about/staffs05.jpg" alt="鈴木 健太" width="230" height="230" decoding="async" />
